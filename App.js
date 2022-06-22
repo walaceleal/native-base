@@ -3,6 +3,7 @@ import { NativeBaseProvider, extendTheme } from "native-base";
 import { Ex1 } from "./src/Ex1";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Ex2 } from "./src/Ex2";
+import { Ex3 } from "./src/Ex3";
 
 export default function App() {
   // Define the config
@@ -17,7 +18,7 @@ export default function App() {
   return (
     <NativeBaseProvider theme={customTheme}>
       <SafeAreaView style={{ flex: 1 }}>
-        <Ex2 />
+        <Ex3 />
       </SafeAreaView>
     </NativeBaseProvider>
   );
