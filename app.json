@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "estudoNativeBase",
+    "slug": "estudoNativeBase",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
