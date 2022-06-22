@@ -1,21 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { NativeBaseProvider, extendTheme } from "native-base";
+import { Ex1 } from "./src/Ex1";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { Ex2 } from "./src/Ex2";
 
 export default function App() {
+  // Define the config
+  const config = {
+    useSystemColorMode: false,
+    initialColorMode: "dark",
+  };
+
+  // extend the theme
+  const customTheme = extendTheme({ config });
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NativeBaseProvider theme={customTheme}>
+      <SafeAreaView style={{ flex: 1 }}>
+        <Ex2 />
+      </SafeAreaView>
+    </NativeBaseProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
